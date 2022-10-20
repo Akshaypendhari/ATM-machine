@@ -24,11 +24,17 @@ public class Working implements Operation {
 
 	@Override
 	public double withdrawAmmount (double withdrawAmmount) {
+		
+		if (withdrawAmmount<atm.getBalance()) {
 	ministat.put(withdrawAmmount, "  amount withdraw");
 	
 		System.out.println("collect the cash " + withdrawAmmount);
 		atm.setBalance( atm.getBalance( )- withdrawAmmount);
 		balance();
+	}
+		else {
+			System.out.println(" Enter valid  Ammount ");
+		}
 		return 0;
 	}
 

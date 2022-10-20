@@ -3,21 +3,32 @@ package atm;
 import java.util.Scanner;
 
 public class MainClass {
+
+
 public static void main(String[] args) {
 	//upcasting
 	Operation ref1 = new Working();
 	
-	int atmNumber =12345;
-	int atmPin =1234;
 	
-	Scanner sc = new Scanner(System.in);
+
+	Scanner sc=new Scanner(System.in);
+
+	System.out.println("Enter your name");
+	String name =sc.nextLine();
+	System.out.println("Enter your ATM card NO");
+	long cardNumber=sc.nextLong();
+	System.out.println("Enter your PIN");
+	int pin=sc.nextInt();
+
+	System.out.println("Account Created succesfully\n\n ");
+System.out.println("LOGIN WITH YOUR PROPER DETAILS\n\n");
 	System.out.println("Welcome to ATM machine");
 	System.out.println("Enter ATM Number ");
-	int number = sc.nextInt();
+	long number = sc.nextInt();
 	System.out.println("Enter ATM PIN ");
-	int pin = sc.nextInt();
+	int pinno = sc.nextInt();
 	
-	if((atmNumber==number)&&(atmPin==pin))
+	if((cardNumber==number)&&(pin==pinno))
 	{ while(true) {
 		System.out.println("Welcome akshay ");
 		System.out.println("1. View Balance");
@@ -67,4 +78,6 @@ public static void main(String[] args) {
 	
 	}	
 }
+
+
 }
